@@ -15,5 +15,5 @@ jobs:
 
     - name: Make GET request to CTF site with proper headers
       run: |
-        response=$(curl -s -H "Content-Type: application/json" https://actions.ctf.cert.unlp.edu.ar/)
+        response=$(curl -s -H "Content-Type: application/json" -H "X-CERTUNLP: flag" https://actions.ctf.cert.unlp.edu.ar/)
         echo "Response: $response"
