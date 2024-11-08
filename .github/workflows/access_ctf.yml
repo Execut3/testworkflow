@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2  # Checks out the repository if needed
 
-    - name: Make GET request to CTF site
+    - name: Make GET request to CTF site with proper headers
       run: |
-        response=$(curl -s https://actions.ctf.cert.unlp.edu.ar/)
+        response=$(curl -s -H "Content-Type: application/json" https://actions.ctf.cert.unlp.edu.ar/)
         echo "Response: $response"
